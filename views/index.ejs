@@ -6,18 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <title>Web Development Ebook</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Nodejs Web Development Ebook</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">
-                    <h3 class="d-inline align-middle">Node Ebook App</h3>
-                </a>
+    <nav class="navbar navbar-expand-md navbar-dark py-3">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <p class="d-inline align-middle">Marie's Library</p>
+            </a>
+        </div>
+    </nav>
+
+    <section class="py-2">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h1 class="display-3 mt-3 pt-5"> Web Development Ebook</h1>
+                <p class="lead">Learn Web Development front to back</p>
+                <form action="/charge" method="POST">
+                    <script 
+                        src="https://checkout.stripe.com/checkout.js" 
+                        class="stripe-button" 
+                        data-key="<%= stripePublishableKey %>"
+                        data-amount="2500" 
+                        data-name="Ebook Sales App" 
+                        data-description="Web development ebook" 
+                        data-image="logo.png" 
+                        data-locale="auto"
+                        data-currency="eur" 
+                        data-zip-code="true">
+                    </script>
+                    <script>
+                        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+                    </script>
+                    <button type="submit" class="btn text-white">Purchase for 25€</button>
+                </form>
             </div>
-        </nav>
-    
-    </div>
+            <div class="col-md-6">
+                <img src="book.png" class="img-fluid" alt="book">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-light border-top py-4 text-gray text-center flex-none">
+        <span>Made with 💜</span>
+        <p>© 2019 </p>
+    </footer>
 </body>
 </html>

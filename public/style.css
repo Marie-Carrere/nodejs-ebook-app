@@ -1,0 +1,22 @@
+.navbar {
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: rgb(61, 55, 58);
+}
+
+.lead {
+    padding: 20px;
+}
+
+img {
+    width: 100vh;
+}
+
+.btn {
+    background-color: rgb(134, 122, 141);
+    margin: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(61, 55, 58);
+}

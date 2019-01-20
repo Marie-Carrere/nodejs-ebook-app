@@ -1,5 +1,4 @@
 const express = require('express');
-const stripe = require('stripe');
 const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const app = express();
@@ -25,4 +24,6 @@ app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
 
+
 module.exports = app;
+
